@@ -1,0 +1,129 @@
+{
+  "info": {
+    "_postman_id": "a0055444-73c4-4f4c-a0d7-46e8e5ea473d",
+    "name": "Jwt_Mascotas",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54487337",
+    "_collection_link": "https://go.postman.co/collection/54487337-a0055444-73c4-4f4c-a0d7-46e8e5ea473d?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "registrar",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"adoptante pedro\",\r\n    \"password\": \"mi clave secreta 123\",\r\n    \"rol\": \"USER\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8071/api/auth/registrar/vulnerable",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8071",
+          "path": [
+            "api",
+            "auth",
+            "registrar",
+            "vulnerable"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "registrar 2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"voluntario_carlos\",\r\n    \"password\": \"mi_clave_secreta_123\",\r\n    \"rol\": \"ADMIN\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8071/api/auth/registrar",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8071",
+          "path": [
+            "api",
+            "auth",
+            "registrar"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"voluntario_carlos\",\r\n    \"password\": \"mi_clave_secreta_123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8071/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8071",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ2b2x1bnRhcmlvX2NhcmxvcyIsInJvbCI6IkFETUlOIiwiaWF0IjoxNzgwNzExNzk1LCJleHAiOjE3ODA3MTM1OTV9.aujOQui10LDGxEgD33ORFf7j_aMqcwc0sdxW-cfi-vQ",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8071/api/auth/perfil",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8071",
+          "path": [
+            "api",
+            "auth",
+            "perfil"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
