@@ -5,3 +5,4 @@ CREATE TABLE usuarios (
     rol VARCHAR (20) NOT NULL
 );
 select * from  usuarios;
+TRUNCATE TABLE usuarios RESTART IDENTITY;
